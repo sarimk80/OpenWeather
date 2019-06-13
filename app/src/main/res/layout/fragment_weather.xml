@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="Weather"
+            type="com.example.openweather.model.WeatherModel" />
+    </data>
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:context=".Weather">
+
+
+            <TextView
+                style="@style/text"
+                android:text="@{Weather.name}" />
+
+
+            <TextView
+                style="@style/text"
+                android:text="@{String.valueOf(Weather.main.temp)}" />
+
+
+            <TextView
+                style="@style/text"
+                android:text="@{String.valueOf(Weather.main.temp_max)}" />
+
+
+            <TextView
+                style="@style/text"
+                android:text="@{String.valueOf(Weather.main.temp_min)}" />
+
+
+            <TextView
+                style="@style/text"
+                android:text="@{Weather.weather.get(0).main}" />
+
+            <TextView
+                style="@style/text"
+                android:text="@{Weather.weather.get(0).description}" />
+
+            <TextView
+                style="@style/text"
+                android:text="@{Weather.sys.country}" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
