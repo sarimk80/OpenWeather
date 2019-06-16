@@ -9,5 +9,5 @@ import retrofit2.http.Query;
 public interface APIService {
 
     @GET("weather")
-    Single<WeatherModel> getWeatherModel(@Query("q") String q, @Query("appid") String appid);
+    Single<WeatherModel> getWeatherModel(@Query("lat") String lat, @Query("lon") String lon, @Query("appid") String appid);
 }
