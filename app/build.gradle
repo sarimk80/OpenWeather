@@ -32,7 +32,9 @@ dependencies {
     def rx_android = "2.1.1"
     def rx_java = "2.2.9"
     def rx_permission = "0.10.2"
-    def glide="4.9.0"
+    def glide = "4.9.0"
+    def reactive_stream = "2.1.0-beta01"
+    def live_data = "2.1.0-beta01"
 
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -58,6 +60,12 @@ dependencies {
     //Glide
     implementation "com.github.bumptech.glide:glide:$glide"
     annotationProcessor "com.github.bumptech.glide:compiler:$glide"
+
+    //Live_data reactive stream for converting rxjava to livedata
+    implementation group: 'androidx.lifecycle', name: 'lifecycle-reactivestreams', version: "$reactive_stream"
+
+    //Live Data
+    implementation group: 'androidx.lifecycle', name: 'lifecycle-extensions', version: "$live_data"
 
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
